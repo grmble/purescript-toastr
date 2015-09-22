@@ -1,6 +1,14 @@
 {
   "name": "purescript-toastr",
-  "version": "1.0.0",
+  "description": "Toastr wrapper",
+  "homepage": "https://github.com/dbushenko/purescript-toastr",
+  "authors": [
+    "dbushenko <d.bushenko@gmail.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dbushenko/purescript-toastr.git"
+  },
   "moduleType": [
     "node"
   ],
