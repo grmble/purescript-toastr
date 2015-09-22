@@ -1,3 +1,4 @@
+
 <iframe src="//benschwarz.github.io/bower-badges/embed.html?pkgname=purescript-toastr" width="160" height="32" allowtransparency="true" frameborder="0" scrolling="0"></iframe>
 
 # purescript-toastr
