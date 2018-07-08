@@ -1,8 +1,27 @@
 module Toastr where
 
 import Prelude
-import Control.Monad.Eff
 
+import Effect (Effect)
+
+type Options =
+  { closeButton :: Boolean
+  , debug :: Boolean
+  , newestOnTop :: Boolean
+  , progressBar :: Boolean
+  , positionClass :: String
+  , preventDuplicates :: Boolean
+  , showDuration :: String
+  , hideDuration :: String
+  , timeOut :: String
+  , extendedTimeOut :: String
+  , showEasing :: String
+  , hideEasing :: String
+  , showMethod :: String
+  , hideMethod :: String
+  }
+
+defaultOptions :: Options
 defaultOptions = {
         closeButton: false,
         debug: false,
@@ -20,9 +39,8 @@ defaultOptions = {
         hideMethod: "fadeOut"
         }
 
-foreign import configure :: forall eff a. a -> Eff eff Unit
-foreign import info :: forall eff. String -> String -> Eff eff Unit
-foreign import success :: forall eff. String -> String -> Eff eff Unit
-foreign import warning :: forall eff. String -> String -> Eff eff Unit
-foreign import error :: forall eff. String -> String -> Eff eff Unit
-
+foreign import configure ::  Options -> Effect Unit
+foreign import info :: String -> String -> Effect Unit
+foreign import success :: String -> String -> Effect Unit
+foreign import warning :: String -> String -> Effect Unit
+foreign import error :: String -> String -> Effect Unit
